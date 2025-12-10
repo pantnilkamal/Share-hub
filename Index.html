@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Hub</title>
+</head>
+
+<body bgcolor="#e0f2ff">
+
+<center>
+    <h1>
+        <font size="7">
+            <b>Welcome to<br>
+            <u>Share Hub</u></b>
+        </font>
+    </h1>
+</center>
+
+<br><br>
+
+<center>
+<form action="dashboard.html" onsubmit="return validateForm()">
+
+    <label><b>Username</b></label><br>
+    <input type="text" id="username" placeholder="Enter username" size="30"><br>
+    <font color="red"><span id="userError"></span></font><br><br>
+
+    <label><b>Keyword</b></label><br>
+    <input type="password" id="password" placeholder="Enter keyword" size="30"><br>
+    <font color="red"><span id="passError"></span></font><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+<br><br>
+
+<img src="IMG_9014.JPG" width="300">
+</center>
+
+<script>
+function validateForm(){
+
+    let username = document.getElementById("username").value.trim();
+    let password = document.getElementById("password").value.trim();
+
+    document.getElementById("userError").innerHTML = "";
+    document.getElementById("passError").innerHTML = "";
+
+    if(username === ""){
+        document.getElementById("userError").innerHTML = "Username is required";
+        return false;
+    }
+
+    if(username.length < 4){
+        document.getElementById("userError").innerHTML = "Minimum 4 characters";
+        return false;
+    }
+
+    if(password === ""){
+        document.getElementById("passError").innerHTML = "Keyword is required";
+        return false;
+    }
+
+    if(password.length < 6){
+        document.getElementById("passError").innerHTML = "Minimum 6 characters";
+        return false;
+    }
+
+    return true; // ✅ open dashboard.html
+}
+</script>
+
+</body>
+</html>

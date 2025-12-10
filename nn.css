@@ -1,0 +1,99 @@
+/* Button styling */
+.btn{
+    padding: 10px 25px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Body */
+body{
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #e0f2ff;
+}
+
+/* Title */
+.title{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #222;
+    margin-top: 40px;
+    line-height: 1.3;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+.title span{
+    color: #4CAF50;
+    text-decoration: underline;
+}
+
+/* Container for form and photo */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Keep items below heading */
+    gap: 50px;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Form styling */
+.myform{
+    width: 350px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.myform label{
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.myform input[type="text"],
+.myform input[type="password"]{
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.myform input:focus{
+    border-color: #4CAF50;
+}
+
+/* Photo styling */
+.photo{
+    width: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Responsive: stack form and photo on small screens */
+@media screen and (max-width: 768px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo, .myform{
+        width: 80%;
+    }
+}
